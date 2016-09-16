@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.leme.z00</groupId>
+  <artifactId>components</artifactId>
+  <packaging>pom</packaging>
+  
+  <parent>
+	<groupId>org.leme</groupId>
+	<artifactId>z00</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<relativePath>../pom.xml</relativePath>
+  </parent>
+  
+  
+   <modules>
+        <module>dao</module>
+		<module>dao-file</module>
+		<module>dao-sql</module>
+		<module>domain</module>         
+		<module>service</module>         
+		<module>service-impl</module>         		
+    </modules>
+  
+
+ 
+</project>

@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!-- JQueryUI -->
+<link rel="stylesheet" type="text/css" href="${base}/resource/dist/plugin/jqueryui/jquery-ui.min.css">
+<!-- Bootstrap 3.3.6 -->
+<link rel="stylesheet" href="${base}/resource/dist/plugin/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="${base}/resource/dist/plugin/bootstrap/buttons.bootstrap.min.css">
+<link rel="stylesheet" href="${base}/resource/dist/plugin/bootstrap/select.bootstrap.min.css">
+<link rel="stylesheet" href="${base}/resource/dist/plugin/bootstrap/editor.bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="${base}/resource/dist/plugin/lte/AdminLTE.min.css">
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+     folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="${base}/resource/dist/plugin/lte/skin/_all-skins.min.css">
+
+

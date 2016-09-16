@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!-- jQuery 2.2.0 -->
+<script src="${base}/resource/dist/plugin/jquery/jQuery-2.2.0.min.js"></script>
+<script src="${base}/resource/dist/plugin/jqueryui/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="${base}/resource/dist/plugin/bootstrap/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="${base}/resource/dist/plugin/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="${base}/resource/dist/plugin/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="${base}/resource/dist/plugin/lte/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="${base}/resource/dist/plugin/lte/demo.js"></script>
+
+
+
+
+
+
+
+
+
+
