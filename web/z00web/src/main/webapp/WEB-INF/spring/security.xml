@@ -49,7 +49,7 @@
     </bean>
 
     <bean id="logoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
-        <constructor-arg name="logoutSuccessUrl" value="/logout"/>
+        <constructor-arg name="logoutSuccessUrl" value="/login.jsp"/>
         <constructor-arg name="handlers">
             <list>
                 <bean class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler"/>
@@ -57,34 +57,36 @@
         </constructor-arg>
     </bean>
 
-    <bean id="basicAuthenticationEntryPoint" class="org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint">
-        <property name="realmName" value="WEB realm"/>
+    <bean id="loginUrlAuthenticationEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+        <constructor-arg name="loginFormUrl" value="/login.jsp"/>
     </bean>
 
-    <bean id="basicAuthenticationFilter" class="org.springframework.security.web.authentication.www.BasicAuthenticationFilter">
-        <constructor-arg name="authenticationManager" ref="authenticationManager"/>
-        <constructor-arg name="authenticationEntryPoint" ref="basicAuthenticationEntryPoint"/>
+    <bean id="usernamePasswordAuthenticationFilter" class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
+        <property name="authenticationManager" ref="authenticationManager"/>
+        <property name="filterProcessesUrl" value="/j_spring_security_check"/>
+        <property name="authenticationFailureHandler">
+            <bean name="simpleUrlAuthenticationFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+                <constructor-arg name="defaultFailureUrl" value="/login.jsp"/>
+            </bean>
+        </property>
     </bean>
 
     <bean id="exceptionTranslationFilter" class="org.springframework.security.web.access.ExceptionTranslationFilter">
-        <constructor-arg name="authenticationEntryPoint" ref="basicAuthenticationEntryPoint"/>
+        <constructor-arg name="authenticationEntryPoint" ref="loginUrlAuthenticationEntryPoint"/>
     </bean>
-
-    <!-- bean id="authenticationFilter" class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
-        <property name="authenticationManager" ref="authenticationManager"/>
-        <property name="filterProcessesUrl" value="/j_spring_security_check"/>
-    </bean -->
 
     <bean id="springSecurityFilterChain" class="org.springframework.security.web.FilterChainProxy">
         <constructor-arg name="filterChains">
             <list>
+                <sec:filter-chain pattern="/login.jsp" filters="none" />
                 <sec:filter-chain pattern="/login" filters="none" />
+                <sec:filter-chain pattern="/logout" filters="none" />
                 <sec:filter-chain pattern="/images/*" filters="none" />
                 <sec:filter-chain pattern="/resources/**" filters="none" />
                 <sec:filter-chain pattern="/**" filters="
         securityContextPersistenceFilter,
         logoutFilter,
-        basicAuthenticationFilter,
+        usernamePasswordAuthenticationFilter,
         exceptionTranslationFilter,
         filterSecurityInterceptor"
                 />
