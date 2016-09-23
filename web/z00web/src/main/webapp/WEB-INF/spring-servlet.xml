@@ -60,7 +60,7 @@
 
 
     <bean id="userDao" class="org.leme.z00.components.dao.user.UserDaoImpl"/>
-    <bean id="userDataService" class="UserDataServiceImpl"/>
+    <bean id="userDataService" class="org.leme.z00.components.service.membership.UserDataServiceImpl"/>
 	
 	 
 
