@@ -1,7 +1,8 @@
 <%@ include file="/WEB-INF/jsp/ui/common/ctx.tag"%>
 <html>
 <body>
-<h2>Hello World   hjghjg!</h2>
+<%@ include file="/menu/menu.jspf"%>
+<h2>Create User</h2>
 
 
 

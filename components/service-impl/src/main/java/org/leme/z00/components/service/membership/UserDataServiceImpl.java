@@ -6,6 +6,7 @@ import org.leme.z00.components.dao.user.UserDao;
 import org.leme.z00.components.domain.Z00CustomException;
 import org.leme.z00.components.domain.user.PasswordHash;
 import org.leme.z00.components.domain.user.User;
+import org.leme.z00.components.domain.user.report.RoleUserReport;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class UserDataServiceImpl implements UserDataService
@@ -75,5 +76,9 @@ public class UserDataServiceImpl implements UserDataService
   
   public void delete(User user){
     userDao.delete(user);
+  }
+
+  public RoleUserReport getRoleUserReport(){
+    return userDao.loadRoleUserReport();
   }
 }

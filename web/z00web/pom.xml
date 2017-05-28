@@ -41,7 +41,10 @@
       <groupId>org.leme.z00.components</groupId>
       <artifactId>dao-sql</artifactId>
     </dependency>
-
+	<dependency>
+	  <groupId>org.leme.z00.components</groupId>
+	  <artifactId>jasperscriptlib</artifactId>
+	</dependency>
 
 	<dependency>
 		<groupId>org.springframework</groupId>
@@ -102,9 +105,13 @@
 	<dependency>
 	   <groupId>net.kemitix</groupId>
 	   <artifactId>sqlite-dialect</artifactId>
-	</dependency>  	
-		
-		
+	</dependency>
+
+	<dependency>
+		<groupId>net.sf.jasperreports</groupId>
+		<artifactId>jasperreports</artifactId>
+	</dependency>
+
 	<dependency>
 		<groupId>org.codehaus.jackson</groupId>
 		<artifactId>jackson-mapper-asl</artifactId>		

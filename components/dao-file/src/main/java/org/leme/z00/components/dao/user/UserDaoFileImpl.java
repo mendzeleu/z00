@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.leme.z00.components.domain.user.PasswordHash;
 import org.leme.z00.components.domain.user.User;
+import org.leme.z00.components.domain.user.report.RoleUserReport;
 
 public class UserDaoFileImpl implements UserDao
 {
@@ -62,5 +63,10 @@ public class UserDaoFileImpl implements UserDao
   @Override
   public void dropTable(String s) {
 
+  }
+
+  @Override
+  public RoleUserReport loadRoleUserReport() {
+    return null;
   }
 }

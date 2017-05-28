@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.leme.z00.components.domain.Z00CustomException;
 import org.leme.z00.components.domain.user.User;
+import org.leme.z00.components.domain.user.report.RoleUserReport;
 
 public interface UserDataService
 {
@@ -15,4 +16,5 @@ public interface UserDataService
   public boolean validatePassword(User user, String password) throws Z00CustomException;
   public List<User> getAllUsers();
   public void delete(User user);
+  public RoleUserReport getRoleUserReport();
 }

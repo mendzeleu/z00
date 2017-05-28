@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-10-11T12:57:13 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="role_user" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" scriptletClass="org.leme.z00.jasperscriptlib.ResourceBundleScriptlet" whenResourceMissingType="Empty" uuid="51fbe226-18a1-42a4-acbe-cce192d86dbc">
+	<property name="ireport.zoom" value="2.1435888100000016"/>
+	<property name="ireport.x" value="33"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.json.source" value="roleuserreport_sample.json"/>
+	<import value="org.leme.z00.jasperscriptlib.Terms"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<queryString language="json">
+		<![CDATA[list]]>
+	</queryString>
+	<field name="userRoleId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[userRoleId]]></fieldDescription>
+	</field>
+	<field name="roleId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[roleId]]></fieldDescription>
+	</field>
+	<field name="roleName" class="java.lang.String">
+		<fieldDescription><![CDATA[roleName]]></fieldDescription>
+	</field>
+	<field name="userId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[userId]]></fieldDescription>
+	</field>
+	<field name="userName" class="java.lang.String">
+		<fieldDescription><![CDATA[userName]]></fieldDescription>
+	</field>
+	<field name="userFirstName" class="java.lang.String">
+		<fieldDescription><![CDATA[userFirstName]]></fieldDescription>
+	</field>
+	<field name="userLastName" class="java.lang.String">
+		<fieldDescription><![CDATA[userLastName]]></fieldDescription>
+	</field>
+	<field name="userEmail" class="java.lang.String">
+		<fieldDescription><![CDATA[userEmail]]></fieldDescription>
+	</field>
+	<field name="createdDate" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="createDate" class="java.util.Date" resetType="Column">
+		<variableExpression><![CDATA[new Date($F{createdDate})]]></variableExpression>
+	</variable>
+	<variable name="terms" class="java.util.Map" resetType="None"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="21" uuid="95b1752b-e05e-4429-91d6-e25df1b18fa6"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Role User Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="53" y="1" width="76" height="39" uuid="890ff810-ecf2-4245-a514-683f75c5c203"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$P{REPORT_SCRIPTLET}.getTerm("fac_Facility") + " lkdsjfhglk;jhdf"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="26" y="1" width="27" height="39" uuid="e032ca90-41b1-4019-97b8-ce9f00e14b07"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+			</textField>
+			<textField>
+				<reportElement x="0" y="1" width="26" height="39" uuid="dd82f577-41e0-417f-8645-1fb4a82f1b78"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$R{urid_trm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="1" width="25" height="38" uuid="fda8dd12-ea59-465e-a033-7f455738dc27"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$R{uid_trm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="1" width="68" height="39" uuid="222a8cb5-2f54-4491-b604-a0e58422b558"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$V{terms}.get("key")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="1" width="179" height="39" uuid="9816ff8b-2349-4fe9-91aa-a331a1234bcd"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$R{fn_trm_prfx}+" " +$R{fn_trm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="1" width="61" height="39" uuid="f7d2f9e7-7b6b-42b0-a05e-e76404630f67"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[Terms.getTerms().getTerm("",1)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="1" width="110" height="39" uuid="8748d43d-f17e-4af2-b0b9-2fc5c475c87c"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA["CREATED DATE"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="26" height="20" uuid="5f414424-bb5a-49cb-90c9-6b80f6dc745e"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userRoleId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="26" y="0" width="27" height="20" uuid="6ba83425-a2e8-4e4e-97ff-fd6b5a78de25"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roleId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="53" y="0" width="76" height="20" uuid="584b6e43-4a52-4aa6-b04b-d467095a4c23"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roleName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="0" width="25" height="20" uuid="ce363114-75c9-4ebe-8320-dfb93a8c21bb"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="179" height="20" uuid="c3f98587-2dd7-41f0-b8e0-406b57249e75"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{fn_trm_prfx}+" "+$F{userFirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="0" width="61" height="20" uuid="c6a82911-5bdd-41e7-859b-f84809f81337"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userLastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="0" width="68" height="20" uuid="80c122d5-2034-4ec7-938e-ab3775a47216"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="M/d/yy" isBlankWhenNull="true">
+				<reportElement x="462" y="0" width="110" height="20" uuid="cd42ff75-6bad-4e23-b73d-fa6b175afdbe"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{createDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

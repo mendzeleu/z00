@@ -19,8 +19,9 @@
 		<module>dao-sql</module>
 		<module>domain</module>         
 		<module>service</module>         
-		<module>service-impl</module>         		
-    </modules>
+		<module>service-impl</module>
+        <module>jasperscriptlib</module>
+   </modules>
   
 
  

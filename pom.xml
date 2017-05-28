@@ -17,7 +17,7 @@
     <properties>
         <version.spring>4.2.6.RELEASE</version.spring>
         <version.jackson>1.9.13</version.jackson>
-        <version.jackson.convert>2.5.0</version.jackson.convert>
+        <version.jackson.convert>2.1.4</version.jackson.convert>
         <version.slf4j>1.7.21</version.slf4j>
         <version.logback>1.1.7</version.logback>
     </properties>
@@ -141,6 +141,13 @@
                 <version>${version.jackson.convert}</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
+            <dependency>
+                <groupId>net.sf.jasperreports</groupId>
+                <artifactId>jasperreports</artifactId>
+                <version>6.3.0</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-all</artifactId>
@@ -181,6 +188,11 @@
             <dependency>
                 <groupId>org.leme.z00.components</groupId>
                 <artifactId>service-impl</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.leme.z00.components</groupId>
+                <artifactId>jasperscriptlib</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
